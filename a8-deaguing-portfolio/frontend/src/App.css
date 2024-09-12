@@ -1,0 +1,510 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+/* @import 'node_modules/modern-normalize/modern-normalize.css'; npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize          */
+/* @import "component1.css";  Component-specific stylesheets, if any.   */
+/* @import url('https://fonts.googleapis.com/css?family=Font+Name'); Add fonts from a hosted services like Google Fonts.   */
+@import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,300;7..72,800&display=swap');
+/*   ----- Variables  -----  */
+:root {
+  --blue-opaque: #5888A6;
+  --light-blue : #88dff0;
+  --light-brown :#bc9c7f;
+  --orange-brown :#B17503;
+  --military-green: #44443b;
+
+  /* --custom-embellishment-name:; */
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {}. */
+  /* background-color:; */
+  background-image:url(images/San_diego.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  
+  
+
+  /* color: (rgb(218, 205, 205, 0.948)); */
+  font-family:'Literata', serif; /* Define with at least one font name and its related generic family name.*/
+  margin:0 auto;
+  padding:1.5%;
+  max-width:70%;
+}
+
+/*  ----- Page layout blocks -----  */
+
+header{
+  background-color:rgba(225, 237, 213, 0.948);
+  border-radius:6px;
+  padding:0%;  
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 2%;
+
+}
+
+main {margin: 1%;}
+section {
+  background-color:rgb(245, 245, 245, 0.848);
+  border-radius:8px;
+  padding:1%;
+  color: rgb(75, 49, 49);
+   
+}
+
+img.App-logo{
+  width:10%;
+  margin-right: 2px;
+  /* margin-top: 5%; */
+}
+
+nav.app-nav{
+  padding: .5%;
+  border-radius: 7px;
+}
+article {border-top: 2px solid rgb(114, 129, 70);}
+  /* #topic1 {}
+  #topic2 {}
+div {}
+aside {} */
+footer {
+  background-color:rgba(225, 237, 213, 0.948);
+  margin:5px;
+  border-radius:6px;
+  padding:1.5%  
+}
+
+/* ----- Anchors ----- Text links */
+/* a {}
+a:link {}
+a:hover {}
+
+a:active {}
+a:visited {} */
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {text-align:center;}
+nav a {
+  background-color:var(--light-brown);
+  color:white; 
+  font-weight:bold;
+  text-decoration:none;
+  border-radius:3px;
+  padding:1%;
+  margin-left:3%;
+  font-family: sans-serif;
+  font-size: 120%;
+  border-bottom: 0%;
+}
+nav a:hover {
+  background-color: white;
+  color: var(--light-brown);
+}
+
+nav.local {text-align: left;}
+nav.local a {
+  background-color:rgb(91, 174, 133);
+  color:white;
+  text-decoration:none;
+  border-radius:5px;
+  padding:0.5%;
+  margin-left:2%;
+  font-family: sans-serif;
+  font-size: 90%;
+  font-weight: bold;
+}
+
+nav.local a:hover{
+  background-color:white;
+  color:rgb(95, 172, 134);
+}
+
+/*  -----  Typography  ----- */
+/* p {}
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {} */
+h1, h2, h3, h4, h5, h6 {font-family:'Literata', serif;} 
+h1 {color : var(--military-green);
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 4px;
+    padding: 5px;
+  }
+h2 {color:var(--blue-opaque);
+
+}
+h3 {color:var(--orange-brown);
+}
+
+#recipeButton{
+  font-weight: bold;
+}
+/* h4 {}
+h5 {}
+h6 {}
+
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {} */
+
+/*  ----- Coding or instructional typography ----- */
+/* pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {} */
+
+/*  ----- Table ----- */
+table#recipes {
+  margin: 4%;
+  border-style: solid;
+  border-color: #bc9c7f;
+  border-radius: 3%;
+  width:70%;
+  display:block;
+  table-layout: fixed;
+  margin-left: 15%;
+}
+table#recipeList{
+  margin: 4%;
+  border-style: solid;
+  border-color: #bc9c7f;
+  border-radius: 3%;
+  width:80%;
+  table-layout: fixed;
+  margin-left: 0%;
+}
+
+#recipeLog{
+  font-size: x-large;
+  text-align: center;
+ 
+}
+
+
+
+#recipeRow{
+  height: 4%;
+}
+caption {
+  border-bottom:1px rgb(161, 185, 113);
+  color:rgb(151, 157, 86);
+  font-weight: bold;
+  font-style: italic; 
+  font-size: large;
+  padding:1% 0;
+  text-align: center;
+}
+th {
+  padding: 3%;
+  text-align: left;
+}
+tbody {
+  text-align: right;
+  height: 3%;
+}
+
+/* #rnHead, #rsHead, #rlHead, #rtHead, #rdHead, #reHead {
+  font-size: medium; */
+/* } */
+/* #reHead{
+  text-align: left;
+}
+#rnHead{
+  width: 30%;
+} */
+
+/* 
+#rsHead{
+  text-align: left;
+  padding-right: 50%;
+} */
+/* #rlHead{
+  text-align: center;
+} */
+
+/* #rtHead{
+  text-align: center;
+} */
+
+/* #rdHead{
+  text-align: right;
+} */
+
+#servingsBody{
+  text-align: center;
+  
+
+}
+
+#langBody{
+  text-align: center;
+
+}
+
+/* input#time{
+  width: 4px; */
+
+/* } */
+
+#timeBody{
+  text-align: center;
+}
+
+#deleteBody, #editBody{
+  text-align: center;
+
+}
+
+#deleteBody:hover{
+  color:rgb(95, 172, 134);
+
+}
+
+#editBody:hover{
+  color:rgb(95, 172, 134);
+
+}
+/* #recipeName{
+  width: 100%;
+} */
+
+label#servingsLabel{
+  text-align: left;
+  
+}
+
+
+#editServLabel{
+  text-align: left;
+  margin-right: 60px;
+}
+ #language{
+  margin-right: 50%;
+  width: 120%;
+
+ }
+
+ #langlabel{
+  text-align: left;
+ }
+
+
+table#recipes th {
+  text-align: left;
+  border-bottom: 1px solid rgb(220, 177, 97);
+  padding: 4%;
+  color: brown;
+  font-size: medium;
+  margin-right: 5%;
+  width: 4%;
+}
+
+table#recipeList th{
+  text-align: left;
+  border-bottom: 1px solid rgb(220, 177, 97);
+  padding: 2%;
+  color: brown;
+  font-size: medium;
+  margin-right: 5%;
+  width: 25%;
+
+}
+
+table#recipeList td{
+  text-align: left;
+
+}
+button#submit{
+  /* margin-left: 100%; */
+  padding: 1%;
+  border-radius:6% ;
+  /* border:3px ; */
+  background-color: rgba(129, 101, 78, 0.948);
+  color: rgb(249, 249, 249);
+  font-size: large;
+
+}
+
+button#submit:hover{
+  background-color:white;
+  color:rgb(151, 157, 86);
+
+}
+table#recipeList input{
+  width: 95%;
+  height: 3%;
+  margin-right: 50%;
+  font-size: medium;
+
+}
+
+
+
+td {
+  text-align: left;
+  border-bottom: 1px solid orange;
+  padding: 2%;
+
+}
+
+
+  td:nth-child(3) {
+    text-align: right;
+    padding: 5%;
+  }
+
+
+/*  ----- Form ----- */
+form, button, input, select, textarea{
+  font-family: 'Literata', serif;
+  color:rgb(93, 106, 56);
+
+  
+}
+
+form{
+  display: flex;
+}
+
+.shipInfo{
+  display:inline-flex;
+  margin-left: 5%;
+  padding: 5%;
+  border: 4%;
+}
+
+.orderPro{
+  padding: 5%;
+}
+
+fieldset {
+  border: 2px --blue-opaque;
+  margin-bottom: 4%;
+  border-radius: 7px;
+  margin-left: 4px;
+  margin-right: 0%;
+  border-style: solid;
+
+}
+
+
+legend {
+  font-family: 'Literata', serif;
+  font-size: medium;
+  color: rgb(149, 118, 15);
+  font-weight: bold;
+
+  }
+  
+label {
+  display: block;
+  margin-top: 4%;
+  font-size: 90%;
+}
+
+
+.required:after{
+  content: "*";
+  color : red;}
+
+/* input, button, textarea, select {
+  font-size:100%;
+  padding:1%;
+  font-family:'Literata', serif;
+  width: 3px;
+
+} */
+
+button {
+  padding: 1%;
+  border-radius:6% ;
+  border:3 px ;
+  background-color: rgba(129, 101, 78, 0.948);
+  color: rgb(249, 249, 249);
+  
+}
+button:hover{
+  background-color:white;
+  color:rgb(151, 157, 86);
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea{ 
+  width: 95%;
+  height: 6%; 
+} 
+
+select{color: rgba(83, 83, 11, 0.895)}
+
+
+  figcaption {
+    font-family: 'Literata', serif;
+    font-size: 150%;
+    padding: 10%;
+  }
+  figure img {
+    width: auto;
+    opacity: 5;
+    padding: auto;
+   
+    
+  }
+
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.Gallery{
+  display: flex;
+  flex-flow: row wrap;
+  margin:1%; 
+  padding:px;
+  width: 100%;
+  border-bottom: 4%;
+}
+.Gallery figure{
+  width: 500px;
+  margin: 2%;
+  padding: 1;
+  border: 3px solid rgb(144, 205, 167);
+  height:auto;
+  margin-bottom: 8%;
+} 
+
+
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
+
+
